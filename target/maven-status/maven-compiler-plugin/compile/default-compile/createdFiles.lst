@@ -1,0 +1,10 @@
+com\company\libros\hibernate\HibernateUtil.class
+com\company\libros\modelos\Categoria.class
+com\company\libros\controller\LibroController.class
+com\company\libros\dao\DaoLibro.class
+com\company\libros\modelos\Libro.class
+com\company\libros\controller\AutorController.class
+com\company\libros\dao\DaoAutor.class
+com\company\libros\modelos\Autor.class
+com\company\libros\dao\DaoCategoria.class
+com\company\libros\service\iBase.class

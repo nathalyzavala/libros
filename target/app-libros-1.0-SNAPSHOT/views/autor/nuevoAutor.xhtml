@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../../MainTemplate/mainTemplate.xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="content">
+        <p:panel footer="Los campos con * son obligatorios">
+            <h:form>
+                <div class="card">
+                    <style>
+                        /* reset on the showcase style*/
+                        body .ui-panelgrid .ui-panelgrid-cell {
+                            background-color: transparent;
+                        }
+
+                        /* example use of styles for your form */
+                        .my-heading-row {
+                            background-color: var(--surface-c);
+                            font-weight: bold;
+                        }
+                    </style>
+                    <p:panelGrid columns="4"
+                                 columnClasses="ui-grid-col-2,ui-grid-col-4,ui-grid-col-2,ui-grid-col-4"
+                                 layout="grid"
+                                 styleClass="ui-panelgrid-blank ui-fluid"
+                                 style="border:0px none; background-color:transparent;">
+
+                        <p:row styleClass="my-heading-row">
+                            Nuevo autor
+                        </p:row>
+
+                        <p:outputLabel for="@next" value="Nombre"/>
+                        <p:inputText/>
+
+                        <p:outputLabel for="@next" value="Apellido"/>
+                        <p:inputText/>
+
+                        <p:outputLabel for="@next" value="Fecha Nacimiento"/>
+                        <p:inputText type="date"/>
+
+                        <p:outputLabel for="@next" value="Pais"/>
+                        <p:inputText/>
+
+                        <p:row>
+                            <p:column styleClass="ui-grid-col-12">
+                                <br></br>
+                                <p:commandButton icon="pi pi-arrow-left" value="Cancelar" styleClass="ui-button-secondary" style="width: auto"/>
+                                &nbsp; 
+                                <p:commandButton icon="pi pi-save" value="Guardar" style="width: auto;"/>
+                            </p:column>
+                        </p:row>
+                    </p:panelGrid>
+                </div>
+            </h:form>
+        </p:panel>
+    </ui:define>
+</ui:composition>
